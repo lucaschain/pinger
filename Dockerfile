@@ -11,5 +11,3 @@ COPY index.html /usr/local/apache2/htdocs/
 COPY supervisord.conf /etc/supervisord.conf
 
 ENTRYPOINT ["supervisord", "--nodaemon", "--configuration", "/etc/supervisord.conf"]
-
-TAG pinger:initial-commit
