@@ -10,4 +10,4 @@ RUN pip install supervisor==$SUPERVISOR_VERSION
 COPY index.html /usr/local/apache2/htdocs/
 COPY supervisord.conf /etc/supervisord.conf
 
-ENTRYPOINT ["supervisord", "--nodaemon", "--configuration", "/etc/supervisord.conf"]
+ENTRYPOINT ["docker-entrypoint.sh"]
